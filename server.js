@@ -171,6 +171,16 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
+// Health check endpoint
+app.get('/health', (req, res) => {
+    res.json({ status: 'OK', message: 'Server is running' });
+});
+
+// Catch-all route to serve index.html for client-side routing
+app.get('*', (req, res) => {
+    res.sendFile(__dirname + '/index.html');
+});
+
 // Start server
 app.listen(PORT, () => {
     console.log(`\n🚀 Server is running on http://localhost:${PORT}`);
