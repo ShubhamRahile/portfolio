@@ -14,7 +14,9 @@ const filesToCopy = [
     'script.js',
     'server.js',
     'package.json',
-    '.env'
+    '.env',
+    'Shubham.jpeg',
+    'Shubham Rahile CV.pdf'
 ];
 
 // Copy files
