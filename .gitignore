@@ -1,6 +1,16 @@
-# Dependencies
-node_modules/
-package-lock.json
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Flask
+instance/
+.webassets-cache
 
 # Environment variables (IMPORTANT - Contains your email password!)
 .env

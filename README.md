@@ -7,9 +7,9 @@ Welcome to my personal portfolio website showcasing my projects, skills, and pro
 
 ## 🛠️ Technologies Used
 - **Frontend**: HTML5, CSS3, JavaScript
-- **Backend**: Node.js, Express.js
-- **Email Service**: Nodemailer
-- **Deployment**: GitHub Pages
+- **Backend**: Flask (Python)
+- **Email Service**: Python smtplib (Gmail SMTP)
+- **Deployment**: Flask Development Server / Production (Heroku, PythonAnywhere)
 
 ## 📁 Project Structure
 ```
@@ -17,7 +17,11 @@ portfolio/
 ├── index.html          # Main HTML structure
 ├── style.css           # Styling and animations
 ├── script.js           # Interactive functionality
-├── server.js           # Backend server with email service
+├── app.py              # Flask backend application
+├── requirements.txt    # Python dependencies
+├── .env                # Environment variables
+├── run.bat             # Windows launcher
+├── run.sh              # Linux/Mac launcher
 ├── Shubham.jpeg        # Profile image
 ├── "Shubham Rahile CV.pdf"  # Resume
 └── README.md           # This file
@@ -31,6 +35,22 @@ portfolio/
 5. **Web Development Projects** - Various frontend/backend work
 6. **Academic Projects** - College coursework and assignments
 
+## 🚀 Quick Start
+
+### Windows (One-Click Launch)
+Simply double-click: `run.bat`
+
+### Manual Start
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the server
+python app.py
+```
+
+Then open: http://localhost:5000
+
 ## 📧 Contact
 - **Email**: shubhamrahile31@gmail.com
 - **GitHub**: [ShubhamRahile](https://github.com/ShubhamRahile)
@@ -38,10 +58,17 @@ portfolio/
 - **Instagram**: [@shubham_.rahile](https://www.instagram.com/shubham_.rahile/)
 
 ## 🚀 Deployment
-This portfolio is hosted on GitHub Pages. The site automatically updates when changes are pushed to the main branch.
+This portfolio runs on Flask and can be deployed on:
+- Local: Flask development server
+- Production: Heroku, PythonAnywhere, AWS, or any platform supporting Python/Flask
+
+## 📄 Documentation
+- **Getting Started**: See `GETTING_STARTED.md`
+- **Quick Guide**: See `QUICKSTART.md`
+- **Full Docs**: See `FLASK_README.md`
 
 ## 📄 License
 This project is open source and available under the [MIT License](LICENSE).
 
 ---
-Built with ❤️ by [Shubham Rahile](https://github.com/ShubhamRahile)
+Built with ❤️ using Flask & Python by [Shubham Rahile](https://github.com/ShubhamRahile)

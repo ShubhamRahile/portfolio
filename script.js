@@ -174,7 +174,8 @@ contactForm.addEventListener('submit', async (e) => {
     submitBtn.textContent = 'Sending...';
     
     try {
-        // Send email via backend
+        // Send email via Flask backend
+        console.log('Sending contact form data:', data);
         const response = await fetch('/api/send-email', {
             method: 'POST',
             headers: {
@@ -183,7 +184,9 @@ contactForm.addEventListener('submit', async (e) => {
             body: JSON.stringify(data)
         });
         
+        console.log('Response status:', response.status);
         const result = await response.json();
+        console.log('Response data:', result);
         
         if (result.success) {
             showNotification(result.message, 'success');
