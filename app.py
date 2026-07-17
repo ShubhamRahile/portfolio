@@ -27,7 +27,9 @@ def create_smtp_transporter():
         
         # Login with credentials
         try:
-            server.login(EMAIL_USER, EMAIL_PASS)
+            # Clean password of any spaces (Gmail App Passwords should be 16 characters without spaces)
+            clean_pass = EMAIL_PASS.replace(" ", "").strip()
+            server.login(EMAIL_USER, clean_pass)
             print("✓ Successfully logged in to SMTP server")
             return server
         except smtplib.SMTPAuthenticationError as auth_error:
